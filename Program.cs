@@ -4,105 +4,78 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp4
+namespace ConsoleApp6
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int x = Convert.ToInt32(Console.ReadLine());
-            int[] y;
-            int ele = 0;
-            string z = "";
-            string[] h = { "one hundred", "two hundre", "three hundre", "four hundred", "fivehundred", "six hundred", "sevenhundred", "eight hundred", "nine hundred" };
-            string[] t = { "ten", "twenty", "thrty", "fourty", "fivty", "sixty", "seventy", "eighty", "ninty" };
-            string[] o = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-            string[] e = { "eleven", "twwelve", "therteen", "fourteen", "fivteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-            int[] n = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
-            
-            for (int a = 0; a < 3; a = a + 1)
-            {
-               y[ a ] = x % 10;
-                x = (x - y[a]) / 10;
 
+            int n = int.Parse(Console.ReadLine());
+            int [] t;
+            string [] s;
+            for(int i = 0; i < n; i++)
+            {
+                s[n]  = Console.ReadLine();
+                t[n]  = Console.ReadLine();
             }
-
-            for (int b = 0; b < 10; b = b + 1)
-            {
-                if (y[2] == n[b])
-                {
-                    z = z + h[b];
-                    break;
-                }
-                if (y[2] == 0)
-                {
-
-                    break;
-                }
-
+            int ch = int.Parse(Console.ReadLine());
+            if (ch == 1) {
+                p1();
             }
-            for (int b = 0; b < 10; b = b + 1)
+            if (ch == 1)
             {
-                if (y[1] == 1)
-                {
-                    ele = ele + 1;
-                    break;
-                }
-                if (y[1] == n[b])
-                {
-                    z = z + t[b];
-                    break;
-                }
-                if (y[1] == 0)
-                {
-
-                    break;
-                }
-
-
+                p2();
             }
-            for (int b = 0; b < 10; b = b + 1)
-            {
-                if (y[1] == 1)
-                {
-
-                    break;
-                }
-
-                if (y[0] == n[b])
-                {
-                    z = z + o[b];
-                    break;
-                }
-                if (y[0] == 0)
-                {
-
-                    break;
-                }
-
-
+            if (ch == 1) {
+                p3();
             }
-            if (y[1] == 1)
-            {
-                for (int b = 0; b < 10; b = b + 1)
+            private void p1(void) {
+                string h = Console.ReadLine();
+                for (int i = 0; i < n; i++)
                 {
-
-
-                    if (y[0] == n[b])
+                    if (h == s[i])
                     {
-                        z = z + e[b];
-                        break;
+                        Console.WriteLine("{0}", t[i]);
                     }
-                    if (y[0] == 0)
-                    {
-
-                        break;
+                    else {
+                        Console.WriteLine("student not found");
                     }
                 }
-
+                
             }
+            private void p2(void) { 
+                int max = t[0];
+                for (int i= 0; i < n; i++) {
+                    if (t[i] > max) {
+                        max = t[i];
+                        string mas = s[i];
+                    }
+                    Console.WriteLine("{0}",max);
+                    Console.WriteLine("{0}", mas);
+                }
+                private void p3(void)
+                {
+                    string h = Console.ReadLine();
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (h == s[i])
+                        {
+                            Console.WriteLine("enter new nane");
+                            string j = Console.ReadLine();
+                            s[i] = j;
+                        }
+                        else
+                        {
+                            Console.WriteLine("student not found");
+                        }
+                    }
 
-        }
-    }
+                }
+                
+
+
+
+                }
 }
-
+}
