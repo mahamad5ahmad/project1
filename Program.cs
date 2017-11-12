@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +23,11 @@ namespace ConsoleApp6
             if (ch == 1) {
                 p1();
             }
-            if (ch == 1)
+            if (ch == 2)
             {
                 p2();
             }
-            if (ch == 1) {
+            if (ch == 3) {
                 p3();
             }
             private void p1(void) {
